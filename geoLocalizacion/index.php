@@ -10,6 +10,9 @@
         <?php
         // put your code here
         ?>
+        <div id="prueba">
+            
+        </div>
         <div id="fondo">
             
             <div id="global">
@@ -38,15 +41,6 @@
                     </table> 
                 </form>
                 </div>
-                
-                <!--Aqui crearé un formulario para la palicación-->
-                <br>
-           <!--     <form name="formulario" enctype="multipart/form-data" method="post" action="proceso.php">
-                    <input name="ip" type="text"/>
-                    <input name="enviar" type="submit" value="Enviar" />
-                </form>
-            </div>-->
-            
         </div>
     </body>
 </html>
