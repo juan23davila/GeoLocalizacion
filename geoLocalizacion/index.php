@@ -10,9 +10,6 @@
         <?php
         // put your code here
         ?>
-        <div id="prueba">
-            
-        </div>
         <div id="fondo">
             
             <div id="global">
