@@ -1,0 +1,26 @@
+/* 
+    Document   : estilo
+    Created on : 16/08/2013, 09:44:15 AM
+    Author     : Ing. Sistemas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+    background-color: #A2B5CD
+}
+
+#fondo {
+    background-color:#FFFFFF;
+    width: 500px;
+    margin: auto;
+    padding: 6px 6px
+}
+
+#global {
+    margin: 0px auto;
+}
+
+#t{
+    margin: auto 100px
+}
+
