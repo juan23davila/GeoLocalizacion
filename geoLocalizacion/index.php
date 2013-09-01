@@ -11,6 +11,9 @@
         // put your code here
         ?>
         <div id="fondo">
+            <div id="peubaGit">
+                
+            </div>
             
             <div id="global">
                 <h2>Pagina para localizar un país de un servidor</h2>
