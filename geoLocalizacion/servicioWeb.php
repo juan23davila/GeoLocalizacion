@@ -24,6 +24,24 @@
        $array = explode(" ", $respuesta);
        echo "La latitud es: ".$array[10]."<br>";
        echo "La longitud es: ".$array[11]; 
+       enviarToMapa("mapa.php",$array);
        
        curl_close($ch);
+       
+       function enviarToMapa($destino="",$dato=array()){
+	$r = false;
+	if($destino!="" ){
+		$ch = curl_init($destino);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt ($ch, CURLOPT_POST, 1);
+		curl_setopt ($ch, CURLOPT_POSTFIELDS, $dato);
+		$data = curl_exec ($ch);
+		curl_close ($ch);
+			if($data != "0")
+				$r = $data;
+	}
+	return $r;
+        }
 ?>
+<br>
+<a href="mapa.php">enlace</a>
