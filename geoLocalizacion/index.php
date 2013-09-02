@@ -43,32 +43,20 @@
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_HEADER, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                    
-                    //Con este comando leemos el XML
-                    $archivo = simplexml_load_file("localizacion.xml");
-                    
-                    //Archivo para almacenarinformación con un formato dado
-                    $newFile = fopen("ubicacion_formato.xml", "w+");
-                    fputs($newFile, '<?xml version="1.0" encoding="UTF-8"?>'."\n");
-                    fputs($newFile, '<ubicaciones>'."\n");
-                    foreach ($archivo->ubicacion as $ubicacion) {
-                        //se construye la peticion
-                        $url = "http://freegeoip.net/xml/186.81.219.93";
-                        if ($ubicacion->Ip) $url .="&Ip=".urlencode ($ubicacion->Ip);
-                        if ($ubicacion->Latitude) $url .="&Latitude=".urlencode ($ubicacion->Latitude);
-                        if ($ubicacion->Longitude) $url .="&Longitude=".urlencode ($ubicacion->Longitude);
+                   
+                    $url = "http://freegeoip.net/xml/186.81.219.93";
                         
-                        //Ahora se realiza la respectiva peticion al webservice
-                        curl_setopt($ch, CURLOPT_URL, $url);
-                        $respuesta = curl_exec($ch);
+                    //Ahora se realiza la respectiva peticion al webservice
+                    curl_setopt($ch, CURLOPT_URL, $url);
+                    $respuesta = curl_exec($ch);
                         
-                        //Ahora se analiza el XML obtenido para saber si puede ser usado
-                        $freegeoip = simplexml_load_string($respuesta);
-                        foreach ($freegeoip->Resultado as $resultado){
-                            $latitud = $resultado->Latitude;
-                            $longitud = $resultado->Longitud;
-                        }
+                    //Ahora se analiza el XML obtenido para saber si puede ser usado
+                    $freegeoip = simplexml_load_string($respuesta);
+                    foreach ($freegeoip->Resultado as $resultado){
+                    $latitud = $resultado->Latitude;
+                    $longitud = $resultado->Longitud;
                     }
+                    
                     
                     ?>
                 </div>              
