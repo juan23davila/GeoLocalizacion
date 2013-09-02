@@ -7,9 +7,7 @@
         <link href="estilo.css" media="screen" rel="StyleSheet" type="text/css">
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+       
         <div id="fondo">
             
             <div id="global">
@@ -37,6 +35,15 @@
                         </tr>
                     </table> 
                 </form>
+                </div>
+                
+                <div id="ProbandoServicio">
+                    <?php
+                    //Se crea el objeto curl para hacer peticion de coordenadas
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_HEADER, 0);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                    ?>
                 </div>
         </div>
     </body>
