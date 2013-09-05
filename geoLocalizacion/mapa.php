@@ -14,21 +14,15 @@
   <body onload="initialize()">
         
       <script type="text/javascript">
-        <?php
-            $array = array($_POST[10],$_POST[11]);
-        ?>
-            var jsarray   = [];
-         <?php
-            for($i=0; $i < count($array); $i++ ){
-                echo 'jsarray['.$i.'] = "'.$array[$i].'";';
-            }
-         ?>
-         alert(jsarray[0]);   
-         alert(jsarray[1]);
+       
+            var latitud = "<? echo $_GET["lat"];?>";
+            var longitud = "<? echo $_GET["lon"];?>";
+            
+            alert(longitud);
             
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(4.5339 , -75.6811),
+          center: new google.maps.LatLng(latitud , longitud),
           zoom: 15,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
