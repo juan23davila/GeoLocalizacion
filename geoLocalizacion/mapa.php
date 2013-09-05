@@ -18,8 +18,6 @@
             var latitud = "<? echo $_GET["lat"];?>";
             var longitud = "<? echo $_GET["lon"];?>";
             
-            alert(longitud);
-            
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(latitud , longitud),
