@@ -1,5 +1,5 @@
 <?php
-      $ip = $_POST["IPAddress"];
+      $ip = (!empty($_POST["IPAddress"])?$_POST["IPAddress"]:"186.81.219.93");
                         
        //Se crea el objeto curl para hacer peticion de coordenadas
        $ch = curl_init();
