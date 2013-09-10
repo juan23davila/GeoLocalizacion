@@ -11,16 +11,21 @@ body {
 
 #fondo {
     background-color:#FFFFFF;
-    width: 500px;
+    width: 850px;
     margin: auto;
     padding: 6px 6px
 }
 
 #global {
-    margin: 0px auto;
+    margin: auto;
+    padding: auto;
+}
+
+#map_canvas{
+    padding: 50%;
 }
 
 #t{
-    margin: auto 100px
+    margin: 0px 0px 20px 0px
 }
 
